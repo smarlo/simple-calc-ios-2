@@ -257,7 +257,7 @@
                                 </state>
                                 <connections>
                                     <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpW-AC-uGp"/>
-                                    <segue destination="tKY-Tq-XGV" kind="presentation" id="Apj-Mb-zrV"/>
+                                    <segue destination="tKY-Tq-XGV" kind="presentation" identifier="" id="Apj-Mb-zrV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -380,12 +380,32 @@
                     <view key="view" contentMode="scaleToFill" id="KRy-vU-qQk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ8-aZ-9dw">
+                                <rect key="frame" x="0.0" y="644" width="414" height="92"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="tKY-Tq-XGV" eventType="touchUpInside" id="Zfb-Py-bpv"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="SimpleCalcSegue" id="qvs-G3-cTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eZ8-aZ-9dw" firstAttribute="height" secondItem="KRy-vU-qQk" secondAttribute="height" multiplier="1/8" id="BRe-Kv-yZg"/>
+                            <constraint firstAttribute="trailing" secondItem="eZ8-aZ-9dw" secondAttribute="trailing" id="bKv-cP-Bqp"/>
+                            <constraint firstItem="cxy-sa-EhT" firstAttribute="top" secondItem="eZ8-aZ-9dw" secondAttribute="bottom" id="lVe-aX-dGj"/>
+                            <constraint firstItem="eZ8-aZ-9dw" firstAttribute="leading" secondItem="KRy-vU-qQk" secondAttribute="leading" id="nz4-S0-VbK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ws-sK-wpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="17"/>
+            <point key="canvasLocation" x="902.89855072463774" y="16.304347826086957"/>
         </scene>
     </scenes>
 </document>

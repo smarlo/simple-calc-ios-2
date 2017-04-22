@@ -16,13 +16,15 @@ class ViewController: UIViewController {
     public var avgPressed: Bool = false
     public var countPressed: Bool = false
     public var factPressed: Bool = false
-    public var history: [String] = []
+    public var history = [String]()
     
     @IBAction func numberPressed(_ sender: Any) {
         if !factPressed {
             let number = (sender as AnyObject).titleLabel!!.text
-            addNum(number!)
-            numPressed = true
+            if number! != "History" {
+                addNum(number!)
+                numPressed = true
+            }
         }
     }
     
@@ -150,7 +152,7 @@ class ViewController: UIViewController {
                 result = processArgs(left: result, right: numbers[i + 1], op: operators[i])
             }
             calcDisplay.text! = String(result)
-            history.append(String(result))
+            history.append("\(arg) = \(result)")
         }
         numPressed = true
         
@@ -179,6 +181,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let historyViewController = segue.destination as! HistoryViewController
+        historyViewController.history = history 
+    }
 
 }
 
