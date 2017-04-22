@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     public var avgPressed: Bool = false
     public var countPressed: Bool = false
     public var factPressed: Bool = false
+    public var history: [String] = []
     
     @IBAction func numberPressed(_ sender: Any) {
         if !factPressed {
@@ -149,6 +150,7 @@ class ViewController: UIViewController {
                 result = processArgs(left: result, right: numbers[i + 1], op: operators[i])
             }
             calcDisplay.text! = String(result)
+            history.append(String(result))
         }
         numPressed = true
         

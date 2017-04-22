@@ -257,6 +257,7 @@
                                 </state>
                                 <connections>
                                     <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpW-AC-uGp"/>
+                                    <segue destination="tKY-Tq-XGV" kind="presentation" id="Apj-Mb-zrV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,6 +368,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-223.19999999999999" y="14.842578710644679"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="gaQ-Vf-UDn">
+            <objects>
+                <viewController id="tKY-Tq-XGV" customClass="HistoryViewController" customModule="simple_calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cs5-9u-h0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxy-sa-EhT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KRy-vU-qQk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ws-sK-wpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="17"/>
         </scene>
     </scenes>
 </document>
