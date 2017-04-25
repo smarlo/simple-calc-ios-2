@@ -18,15 +18,15 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height + 100)
-        let offset: Int = 30
-        var i = 0
+        let space: Int = 30
+        var labelCount = 0
         for item in history {
-            let label = UILabel(frame: CGRect(x: 0, y: i * offset, width: Int(self.view.frame.size.width), height: 25))
+            let label = UILabel(frame: CGRect(x: 0, y: labelCount * space, width: Int(self.view.frame.size.width), height: 25))
             label.textColor = UIColor.black
             label.textAlignment = .left
             label.backgroundColor = UIColor.white
             label.text = item
-            i += 1
+            labelCount += 1
             self.scrollView?.addSubview(label)
         }
     }
